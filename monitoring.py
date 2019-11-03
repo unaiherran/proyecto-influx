@@ -17,7 +17,7 @@ def define_json(measurement, time, fields):
             "tags": {
                 "provider": "KC-BD-FF",
             },
-            "time": [time.isoformat()],
+            "time": time.isoformat(),
             "fields": fields
 
         }
@@ -32,8 +32,9 @@ def archivos_para_procesar():
 
 def main():
     ahora = datetime.now()
-
-    json_body = define_json('Archivos en scrap',ahora, archivos_para_procesar())
+    # fields = {"value": archivos_para_procesar()}
+    fields = {"value":10}
+    json_body = define_json('Archivos en scrap',ahora, fields)
     client.write_points(json_body)
     pass
 

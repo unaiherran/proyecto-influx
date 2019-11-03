@@ -32,12 +32,13 @@ def archivos_para_procesar():
 
 def main():
     ahora = datetime.now()
+
+    # Archivos para procesar
     fields = {"value": archivos_para_procesar()}
-    #fields = {"value":10}
     json_body = define_json('Archivos en scrap',ahora, fields)
-    print(json_body)
     client.write_points(json_body)
-    pass
+
+
 
 if __name__ == '__main__':
     main()

@@ -4,3 +4,4 @@ headers = {'User-Agent': 'Crawler para Proyecto Estudiante Big Data - unai.herra
 
 #Directorios
 SCRAP_DIR = '/home/ec2-user/captura-camaras/scrapped/'
+PROCESS_DIR = '/home/ec2-user/captura-camaras/procesed/'
